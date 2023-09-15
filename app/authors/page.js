@@ -1,5 +1,7 @@
-import React from "react";
-
 export default function Authors() {
-  return <div>Authors</div>;
+  return (
+    <main className="flex flex-grow justify-center">
+      <div className="w-[80%] bg-white">Authors</div>
+    </main>
+  );
 }

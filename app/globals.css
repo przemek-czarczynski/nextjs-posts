@@ -6,5 +6,25 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #e8eae9;
+  /* background: #e8eae9; */
+}
+
+header {
+  @apply flex items-center justify-between flex-wrap bg-black sticky top-0 z-50;
+}
+
+header div {
+  @apply flex justify-center lg:flex-grow;
+}
+
+.header-Link {
+  @apply block p-4 leading-8 lg:inline-block lg:mt-0 text-white text-xl font-semibold border-b-4 border-transparent hover:text-greenDeloitte hover:border-b-4 hover:border-greenDeloitte duration-300 mr-4;
+}
+
+.active {
+  @apply text-greenDeloitte hover:border-b-4 border-greenDeloitte duration-300 mr-4;
+}
+
+footer {
+  @apply flex items-center justify-center flex-wrap bg-black p-4 border-t-2 text-white;
 }

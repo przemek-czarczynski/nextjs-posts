@@ -1,22 +1,27 @@
+"use client";
+
+// Import react/next components
 import Link from "next/link";
+// Import react/next hooks
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const linkStyle =
-    "block p-4 leading-8 lg:inline-block lg:mt-0 text-white text-xl font-semibold border-b-4 border-transparent hover:text-greenDeloitte hover:border-b-4 hover:border-greenDeloitte duration-300 mr-4";
+  const pathname = usePathname();
   return (
-    <header className="flex items-center justify-between flex-wrap bg-black">
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="flex justify-center lg:flex-grow">
-          <Link href="/" className={linkStyle}>
-            Home
-          </Link>
-          <Link href="/authors" className={linkStyle}>
-            Authors
-          </Link>
-          <Link href="/statistics" className={linkStyle}>
-            Statistics
-          </Link>
-        </div>
+    <header>
+      <div>
+        <Link
+          href="/"
+          className={pathname == "/" ? "header-Link active" : "header-Link"}
+        >
+          Home
+        </Link>
+        <Link href="/authors" className="header-Link">
+          Authors
+        </Link>
+        <Link href="/statistics" className="header-Link">
+          Statistics
+        </Link>
       </div>
     </header>
   );

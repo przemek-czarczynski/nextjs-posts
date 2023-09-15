@@ -1,0 +1,15 @@
+.postsContainer {
+  @apply block flex flex-col justify-center items-center mt-4 mb-4;
+}
+.postCard {
+  @apply relative mt-4 mb-4 bg-gray-100 drop-shadow-md rounded-sm p-2 text-sm flex flex-col sm:w-[70%] md:w-[60%] xl:w-[50%] text-ellipsis;
+}
+.postCard h2 {
+  @apply text-sm font-semibold uppercase mt-2 mb-2;
+}
+.cardAuthor {
+  @apply fixed bottom-0 right-2 h-7 w-[50%] sm:w-[35%] xl:w-[20%] -mb-4 border-2 border-gray-200 rounded-sm bg-white hover:border-b-4 hover:border-b-greenDeloitte duration-300;
+}
+.cardAuthor p {
+  @apply text-sm text-greenDeloitte italic text-right pr-2 w-full;
+}
