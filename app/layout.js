@@ -1,9 +1,8 @@
+// Import own components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./globals.css";
-import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
 
 export const metadata = {
   title: "Home Page - Posts",
@@ -15,7 +14,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="flex flex-col h-screen ">
         <Header />
-        {children}
+        <main className="flex flex-grow justify-center">
+          <div className="w-[90%]">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>

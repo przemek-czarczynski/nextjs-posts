@@ -1,0 +1,6 @@
+.pagination {
+  @apply flex justify-center font-semibold mb-4;
+}
+.button {
+  @apply border-2 rounded-sm p-2 font-semibold w-10 disabled:opacity-40 hover:text-white hover:bg-greenDeloitte duration-300;
+}

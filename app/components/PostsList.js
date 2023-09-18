@@ -8,9 +8,9 @@ import { Post } from "./Post";
 // Import styles
 import styles from "./../styles/postsStyles.module.css";
 
-export const PostsList = async () => {
+export const PostsList = async ({ page }) => {
   let allPosts = [];
-  const posts = await getAllPosts();
+  const posts = await getAllPosts(page);
 
   for (let post of posts) {
     let user = await getUser(post.userId);
@@ -24,7 +24,7 @@ export const PostsList = async () => {
     <>
       <section className={styles.postsContainer}>
         {allPosts.map((post) => {
-          return <Post post={post} />;
+          return <Post id={post.id} post={post} />;
         })}
       </section>
     </>
