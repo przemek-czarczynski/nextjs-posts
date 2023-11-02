@@ -9,15 +9,19 @@ import getTotalCountPosts from "@/lib/getTotalCountPosts";
 import { PostsList } from "./components/PostsList";
 import Pagination from "./components/Pagination";
 import Loading from "./loading";
+import { Modal } from "./components/Modal";
 
 export default async function Home() {
   const totalCountPosts = await getTotalCountPosts();
   return (
-    <>
+    <div className="flex flex-col items-center">
+      <Modal />
       <Suspense fallback={<Loading />}>
         <PostsList page={1} />
         <Pagination currentPage={1} totalCountPosts={totalCountPosts} />
       </Suspense>
-    </>
+    </div>
   );
 }
+
+export const revalidate = 3600; // revalidate at most every hour

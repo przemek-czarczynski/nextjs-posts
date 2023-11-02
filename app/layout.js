@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex flex-col h-screen ">
+      <body className="flex flex-col h-screen overflow-auto">
         <Header />
         <main className="flex flex-grow justify-center">
           <div className="w-[90%]">{children}</div>

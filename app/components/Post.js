@@ -9,7 +9,7 @@ export const Post = ({ post }) => {
     <div key={post.id} className={styles.postCard}>
       <h2>{post.title}</h2>
       <p className="pb-2">{post.body}</p>
-      <Link className={styles.cardAuthor} href={`/users/${post.userId}`}>
+      <Link className={styles.cardAuthor} href={`/authors/${post.userId}`}>
         <p>{post.username}</p>
       </Link>
     </div>

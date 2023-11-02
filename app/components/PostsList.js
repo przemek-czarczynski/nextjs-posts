@@ -23,9 +23,9 @@ export const PostsList = async ({ page }) => {
   const content = (
     <>
       <section className={styles.postsContainer}>
-        {allPosts.map((post) => {
-          return <Post id={post.id} post={post} />;
-        })}
+        {allPosts.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
       </section>
     </>
   );
